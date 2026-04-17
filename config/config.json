@@ -1,0 +1,7 @@
+{
+    "name": "Instant-Search",
+    "version": "1.0.0",
+    "llm_url": "",
+    "llm_model": "qwen3vl",
+    "api_key": ""
+}
