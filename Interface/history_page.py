@@ -18,7 +18,8 @@ class HistoryPage(QWidget):
     def __init__(self, parent=None):
         super().__init__()
         # 初始化会话管理器
-        self.temp_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'TEMP')
+        # self.temp_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'TEMP')
+        self.temp_dir = os.path.join(os.getcwd(), 'TEMP')
         if not os.path.exists(self.temp_dir):
             os.makedirs(self.temp_dir)
         self.session_manager = SessionManager(self.temp_dir)

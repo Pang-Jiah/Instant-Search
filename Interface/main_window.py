@@ -660,7 +660,8 @@ class MainWindow(QMainWindow):
     def on_session_selected(self, session_id, session_data):
         """处理会话选择事件"""
         # 加载会话数据
-        session_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'TEMP', 'sessions', session_id)
+        # session_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'TEMP', 'sessions', session_id)
+        session_path = os.path.join(os.getcwd(), 'TEMP', 'sessions', session_id)
         image_path = os.path.join(session_path, session_data.get('image_path', ''))
         
         if os.path.exists(image_path):
